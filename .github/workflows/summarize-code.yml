@@ -12,11 +12,14 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
+      with:
+        node-version: '20'  # Ensure using Node.js 20
 
     - name: Set up Python
       uses: actions/setup-python@v3
       with:
         python-version: '3.11'
+        node-version: '20'  # Ensure using Node.js 20
 
     - name: Install dependencies
       run: |
@@ -26,3 +29,11 @@ jobs:
     - name: Run summarizer script
       run: |
         python summarize_code.py
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.email "you@example.com"
+        git config --global user.name "Your Name"
+        git add narrative_document.md
+        git commit -m "Add code summary"
+        git push origin main
