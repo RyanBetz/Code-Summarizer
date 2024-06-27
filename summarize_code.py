@@ -6,7 +6,7 @@ def analyze_code(repo_path):
     analysis = []
     for root, _, files in os.walk(repo_path):
         for file in files:
-            if file.endfswith('.py'):
+            if file.endswith('.py'):
                 with open(os.path.join(root, file), 'r') as f:
                     snippet = f.read()
                     lines = snippet.split('\n')
