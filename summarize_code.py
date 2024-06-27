@@ -2,7 +2,7 @@ import os
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 
 
-def analyze_code(repo_path):
+def analyze_code(rfepo_path):
     analysis = []
     for root, _, files in os.walk(repo_path):
         for file in files:
