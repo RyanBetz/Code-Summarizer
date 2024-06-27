@@ -1,5 +1,6 @@
 import os
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
+import pandas as pd
 
 def analyze_code(rfepo_path):
     analysis = []
