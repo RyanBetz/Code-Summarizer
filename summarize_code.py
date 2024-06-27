@@ -1,8 +1,6 @@
 import os
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 
-def try
-    return 1;
 def analyze_code(rfepo_path):
     analysis = []
     for root, _, files in os.walk(repo_path):
@@ -51,6 +49,6 @@ def main():
 
     print("Narrative document generated successfully!")
 
-try()
+
 if __name__ == "__main__":
     main()
